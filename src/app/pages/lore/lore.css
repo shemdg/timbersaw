@@ -1,0 +1,5 @@
+.banner {
+  background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url('/assets/images/12_Dota2-Timbersaw.webp');
+  background-size: cover;
+  background-position: center center;
+}

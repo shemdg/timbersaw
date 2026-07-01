@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { Navbar } from '../../shared/navbar/navbar';
 
 @Component({
-  selector: 'app-builds',
+  selector: 'app-more',
   imports: [Navbar],
-  templateUrl: './builds.html',
-  styleUrl: './builds.css'
+  templateUrl: './more.html',
+  styleUrl: './more.css'
 })
-export class Builds {}
+export class More {}

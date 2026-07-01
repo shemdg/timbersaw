@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink } from '@angular/router'; // 1. Import the RouterLink tool
 
 @Component({
   selector: 'app-navbar',
-  imports: [RouterLink],
+  standalone: true,
+  imports: [RouterLink], // 2. Add it to the imports array!
   templateUrl: './navbar.html',
-  styleUrl: './navbar.css'
+  styleUrl: './navbar.css' 
 })
-export class Navbar {}
+export class Navbar { }

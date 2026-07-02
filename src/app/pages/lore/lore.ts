@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { Navbar } from '../../shared/navbar/navbar';
 
 @Component({
   selector: 'app-lore',
-  imports: [Navbar],
+  imports: [],
   templateUrl: './lore.html',
   styleUrl: './lore.css'
 })

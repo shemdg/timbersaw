@@ -1,5 +1,170 @@
+/* Layout Background Setup */
 .banner {
-  background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url('/assets/images/1_Dota2-Timbersaw.jpg');
+  width: 100%;
+  min-height: 100vh;
+  /* Make sure this matches whatever background image you want for this specific page */
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('/assets/images/background.jpg');
   background-size: cover;
-  background-position: center center;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Master Profile Card Structure */
+.hero-card {
+  width: 300px;
+  background: #1c2426;
+  border: 2px solid #2e3d40;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  font-family: 'Radiance', sans-serif, system-ui;
+}
+
+/* Header Section */
+.card-header {
+  background: radial-gradient(circle, #2d1f18 0%, #120d0a 100%);
+  padding: 24px 16px 16px 16px;
+  text-align: center;
+  border-bottom: 1px solid #2a221d;
+}
+
+.hero-portrait {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 3px solid #b37437;
+  box-shadow: 0 0 15px rgba(179, 116, 55, 0.4);
+  object-fit: cover;
+}
+
+/* Attributes Grid */
+.attributes-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 6px;
+}
+
+.attr-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 6px 4px;
+  border-radius: 6px;
+  flex: 1;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.attr-badge img {
+  width: 28px;
+  height: 28px;
+  margin-bottom: 4px;
+}
+
+.attr-gain {
+  color: #e4e4e4;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* Dynamic Text Color Accents matching Dota attributes */
+.strength { border-left: 2px solid #ec3d17; }
+.agility { border-left: 2px solid #26e639; }
+.intelligence { border-left: 2px solid #00d9ff; }
+
+/* Identity Area */
+.card-body {
+  padding: 16px;
+  text-align: center;
+  background: #14191a;
+}
+
+.hero-name {
+  color: #ffffff;
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-roles {
+  color: #a3a3a3;
+  font-size: 10px;
+  margin: 6px 0 0 0;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+/* Vital Bars Section */
+.vitals-container {
+  padding: 0 16px 16px 16px;
+  background: #14191a;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat-bar {
+  width: 100%;
+  height: 22px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.health-bar {
+  background: linear-gradient(90deg, #287328 0%, #399e39 100%);
+  border: 1px solid #1f591f;
+}
+
+.mana-bar {
+  background: linear-gradient(90deg, #16568f 0%, #1f75c4 100%);
+  border: 1px solid #11426e;
+}
+
+.bar-text {
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: bold;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+  z-index: 2;
+}
+
+.bar-regen {
+  position: absolute;
+  right: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 10px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+/* Action Control Trigger */
+.card-action-btn {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(180deg, #b37437 0%, #804f22 100%);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.card-action-btn:hover {
+  background: linear-gradient(180deg, #cc853f 0%, #995f2a 100%);
+}
+
+.card-action-btn span {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
 }

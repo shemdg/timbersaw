@@ -1,0 +1,36 @@
+.navbar {
+  /* 1. Pull it out of the document flow to let pages slide underneath it */
+  position: absolute; 
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Perfectly centers the 85% width box */
+  width: 85%;
+  
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  /* 2. Keep it transparent so the page's banner image shows through */
+  background: transparent; 
+  
+  /* 3. Ensure links stay clickable on top of the background graphics */
+  z-index: 1000; 
+}
+
+/* Keep your existing logo and link configurations here */
+.logo {
+  width: 120px;
+  cursor: pointer;
+}
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}

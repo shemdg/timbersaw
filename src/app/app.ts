@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Navbar } from './shared/navbar/navbar'; // <-- Make sure this path points to your navbar.ts!
-import { Abilities } from './abilities/abilities';
+import { Navbar } from './shared/navbar/navbar';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar, Abilities],
+  imports: [RouterOutlet, Navbar],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

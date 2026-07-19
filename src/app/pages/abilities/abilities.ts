@@ -13,7 +13,8 @@ interface Ability {
   selector: 'app-abilities',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './abilities.html'
+  templateUrl: './abilities.html',
+  styleUrl: './abilities.css'
 })
 export class Abilities {
   // Populated with Timbersaw's full ability set
@@ -23,28 +24,28 @@ export class Abilities {
       name: 'Whirling Death',
       description: 'Timbersaw whirls extremely sharp edges, damaging enemies and destroying trees around him in an area of effect.',
       iconUrl: 'https://placehold.co/80x80/232931/white?text=WD', // Placeholder
-      videoUrl: 'assets/abilities/whirling_death.webm'
+      videoUrl: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4'
     },
     {
       id: 'timber-chain',
       name: 'Timber Chain',
       description: 'Fires a chain that embeds itself in the first tree it hits, pulling Timbersaw to that location.',
       iconUrl: 'https://placehold.co/80x80/232931/white?text=TC', // Placeholder
-      videoUrl: 'assets/abilities/timber_chain.webm'
+      videoUrl: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4'
     },
     {
       id: 'reactive-armor',
       name: 'Reactive Armor',
       description: 'Passively grants bonus armor and health regeneration every time Timbersaw is attacked.',
       iconUrl: 'https://placehold.co/80x80/232931/white?text=RA', // Placeholder
-      videoUrl: 'assets/abilities/reactive_armor.webm'
+      videoUrl: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4'
     },
     {
       id: 'chakram',
       name: 'Chakram',
       description: 'Fires a massive saw blade that stays at a target area, dealing damage in a radius and slowing enemies.',
       iconUrl: 'https://placehold.co/80x80/232931/white?text=CH', // Placeholder
-      videoUrl: 'assets/abilities/chakram.webm'
+      videoUrl: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4'
     }
   ];
 

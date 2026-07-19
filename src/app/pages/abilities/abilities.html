@@ -1,0 +1,54 @@
+<div class="banner">
+  <div class="abilities-card">
+    <div class="card-header-custom">
+      <h2 class="hero-title">TIMBERSAW ABILITIES</h2>
+      <p class="hero-subtitle">COMBAT PROFILE</p>
+      <hr class="divider">
+    </div>
+
+    <div class="card-body-custom">
+      <!-- Ability Icons Row -->
+      <div class="ability-icons">
+        @for (ability of abilities; track ability.id) {
+          <button
+            type="button"
+            (click)="selectAbility(ability)"
+            class="ability-icon-btn"
+            [class.selected]="selectedAbility.id === ability.id"
+            [attr.aria-label]="'Select ' + ability.name"
+            [attr.aria-pressed]="selectedAbility.id === ability.id"
+          >
+            <img [src]="ability.iconUrl" [alt]="ability.name" />
+          </button>
+        }
+      </div>
+
+      <!-- Content Area: Two-Column Layout -->
+      <div class="content-grid">
+        <!-- Left Column: Video Placeholder -->
+        <div class="content-col">
+          <div class="video-placeholder">
+            <video
+              [src]="'/assets/Timbersaw_Loadout_Spawn.mp4.mp4'"
+              autoplay
+              loop
+              muted
+              playsinline
+              controls
+              class="ability-video"
+            ></video>
+          </div>
+        </div>
+
+        <!-- Right Column: Ability Details -->
+        <div class="content-col">
+          <div class="ability-details">
+            <h3 class="ability-name">{{ selectedAbility.name }}</h3>
+            <p class="ability-description">{{ selectedAbility.description }}</p>
+            <button type="button" class="btn-rev-saw">REV THE SAW</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

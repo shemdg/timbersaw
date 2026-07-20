@@ -1,8 +1,14 @@
 .banner {
   position: relative;
+  width: 100%;
+  min-height: 100vh;
   background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url('/assets/images/background.jpg');
   background-size: cover;
   background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
   overflow: hidden;
 }
 
@@ -16,44 +22,57 @@
   z-index: 1;
 }
 
-.banner .content {
+/* Card Master Structure (matches builds/lore card) */
+.build-card {
+  position: relative;
   z-index: 2;
+  width: 420px;
+  background: #1c2426;
+  border: 2px solid #2e3d40;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  font-family: 'Radiance', sans-serif, system-ui;
 }
 
-/* Title/subtitle glass panel — thin "scrapped metal" border */
-.banner .content .hero-panel {
-  display: inline-block;
-  background: rgba(0, 0, 0, 0.6);
-  border: 1px solid #3a3a3a;
-  border-radius: 6px;
-  padding: 32px 56px;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+/* Header Section */
+.card-header {
+  background: radial-gradient(circle, #2d1f18 0%, #120d0a 100%);
+  padding: 24px 16px;
+  text-align: center;
+  border-bottom: 1px solid #2a221d;
 }
 
-.banner .content h1 {
-  font-size: 70px;
-  font-weight: 800;
-  letter-spacing: 3px;
-  margin: 0;
+.hero-name {
   color: #ffffff;
-  text-shadow: 0 4px 14px rgba(0, 0, 0, 0.85), 0 0 24px rgba(255, 87, 34, 0.15);
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
-.banner .content p {
-  margin: 16px 0 0;
+.hero-roles {
+  color: #a3a3a3;
+  font-size: 10px;
+  margin: 6px 0 0 0;
+  letter-spacing: 1px;
+  font-weight: bold;
   font-family: 'Courier New', monospace;
-  font-weight: 400;
-  letter-spacing: 1.5px;
-  line-height: 1.6;
-  color: #d0d0d0;
+}
+
+/* Body */
+.card-body {
+  background: #14191a;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-actions {
   display: flex;
   justify-content: center;
   gap: 16px;
-  margin-top: 28px;
   flex-wrap: wrap;
 }
 
